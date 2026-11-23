@@ -25,11 +25,10 @@ Once the import is fixed, three tests will fail because of bugs in `app/calculat
 - `get_average_latency([])` raises `ZeroDivisionError` instead of returning 0.0.",
   "proposed_fix": "1) Make the repo root importable. Add a `pytest.ini` at the repo root:
 
-```ini
 [pytest]
 pythonpath = .
 testpaths = tests
-```
+
 (Alternatives: an empty `conftest.py` at the repo root, or changing the workflow step to `python -m pytest -v --tb=short`.)
 
 Also add an empty `app/__init__.py` if it doesn't already exist.
