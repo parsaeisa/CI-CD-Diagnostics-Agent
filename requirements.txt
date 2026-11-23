@@ -1,0 +1,6 @@
+fastmcp
+PyGithub
+python-dotenv
+pydantic
+pytest
+anthropic
